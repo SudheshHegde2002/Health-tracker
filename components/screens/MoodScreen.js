@@ -21,6 +21,12 @@ const MoodScreen = () => {
           <Text style={styles.emoji}>😢</Text>
         </TouchableOpacity>
         <TouchableOpacity 
+          style={[styles.moodButton, mood === 'Sad' && styles.selectedMood]}
+          onPress={() => setMood('Sad')}
+        >
+          <Text style={styles.emoji}></Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
           style={[styles.moodButton, mood === 'Happy' && styles.selectedMood]}
           onPress={() => setMood('Happy')}
         >
